@@ -21,7 +21,7 @@ for (let i = 0; i < buttons.length; i++) {
         }
         const container = document.createElement('p');
         container.textContent = 'You have completed the task Fix video loading issue at 12:10:20 AM'
-        container.classList.add('bg-indigo-50', 'p-3', 'rounded-lg', 'mt-8');
+        container.classList.add('bg-indigo-50', 'p-3', 'rounded-lg', 'mt-8', 'font-semibold');
         const newText = document.getElementById('clear-container');
         if (newText) {
             newText.appendChild(container);
@@ -36,11 +36,12 @@ for (let i = 0; i < buttons.length; i++) {
 };
 document.getElementById('btn-6').addEventListener('click', function (event) {
     event.preventDefault();
-    alert("Congrats!! You have completed all the current task");
+    alert("Congrats!! You have completed all the current task.");
 });
+const colors = ["red", "blue", "green", "yellow", "purple", "orange", 'cyan', 'teal', 'slate', 'gray', 'black', 'emerald'];
+let i = 0;
 document.getElementById('nav-btn').addEventListener('click', function (event) {
     event.preventDefault();
-    let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-    document.body.style.backgroundColor = randomColor;
-    console.log(random)
+    document.body.style.backgroundColor = colors[i];
+    i = [i + 1] % colors.length;
 })
